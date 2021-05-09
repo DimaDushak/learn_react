@@ -1,0 +1,39 @@
+{
+    "name": "react_skillbox",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "eslint": "eslint --fix ./src",
+        "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+        "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+        "predev": "npm run eslint",
+        "dev": "cross-env NODE_ENV=development webpack serve"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.5",
+        "@types/react-dom": "^17.0.3",
+        "@typescript-eslint/eslint-plugin": "^4.22.1",
+        "eslint": "^7.26.0",
+        "eslint-config-airbnb-typescript": "^12.3.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "html-webpack-plugin": "^5.3.1",
+        "prettier": "^2.2.1",
+        "ts-loader": "^9.1.2",
+        "typescript": "^4.2.4",
+        "webpack": "^5.36.2",
+        "webpack-cli": "^4.7.0",
+        "webpack-dev-server": "^3.11.2"
+    }
+}
