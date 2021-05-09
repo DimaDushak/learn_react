@@ -32,6 +32,8 @@
     },
     "ignorePatterns": [
         "webpack.config.js",
+        "cfg",
+        "bin",
         "dist/*"
     ],
     "rules": {
