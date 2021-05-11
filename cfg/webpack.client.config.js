@@ -36,6 +36,8 @@ module.exports = {
             },
         ],
     },
-    plugins: [new CleanWebpackPlugin(), new HotModuleReplacementPlugin()],
+    plugins: IS_DEV
+        ? [new CleanWebpackPlugin(), new HotModuleReplacementPlugin()]
+        : [],
     devtool: setupDevtool(),
 };
