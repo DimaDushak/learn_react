@@ -34,6 +34,7 @@
         "webpack.config.js",
         "cfg",
         "bin",
+        "jest.config.js",
         "dist/*"
     ],
     "rules": {
