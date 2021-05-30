@@ -38,6 +38,7 @@
         "dist/*"
     ],
     "rules": {
-        "prettier/prettier": "warn"
+        "prettier/prettier": "warn",
+        "react/require-default-props": 0
     }
 }

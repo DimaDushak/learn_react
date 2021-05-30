@@ -1,0 +1,38 @@
+.card {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    position: relative;
+}
+
+.card > div {
+    flex-basis: 100%;
+}
+
+.card:hover {
+    outline: 1px solid var(--greyD9);
+}
+
+.card:hover h2 a {
+    color: var(--orange);
+}
+
+@media (min-width: 1024px) {
+    .card {
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 20px 40px 20px 37px;
+    }
+
+    .card > div {
+        flex-basis: auto;
+    }
+}
+
+@media (min-width: 1540px) {
+    .card {
+        padding: 20px 45px 20px 72px;
+    }
+}
