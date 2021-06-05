@@ -1,0 +1,93 @@
+.controlBlock {
+    align-items: center;
+    color: var(--greyC4);
+    display: flex;
+    font-size: 0.6rem;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.controlBlock > div {
+    align-items: center;
+    display: flex;
+}
+
+.controlBlock > div:not(:last-of-type) {
+    margin-top: 2px;
+}
+
+.upButton path,
+.downButton path,
+.messageButton path {
+    transition: fill 0.3s;
+}
+
+.upButton:hover path {
+    fill: var(--green);
+}
+
+.downButton {
+    transform: translateY(-2px) rotate(180deg);
+}
+
+.downButton:hover path {
+    fill: var(--red);
+}
+
+.voteCount {
+    margin: 0 5px;
+}
+
+.messageButton {
+    height: 15px;
+    margin-right: 6px;
+}
+
+.messageButton:hover path {
+    fill: var(--orange);
+}
+
+.roundButton {
+    align-items: center;
+    background-color: var(--greyC4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    transition: background-color 0.3s;
+    width: 20px;
+}
+
+.roundButton:not(:last-child) {
+    margin-right: 15px;
+}
+
+.roundButton:hover {
+    background-color: var(--orange);
+}
+
+@media (min-width: 1024px) {
+    .controlBlock {
+        font-size: 0.7rem;
+        padding: 0;
+    }
+
+    .voteCount {
+        margin: 0;
+    }
+
+    .controlBlock > div:not(:first-of-type) {
+        display: none;
+    }
+
+    .controlBlock > div:first-of-type,
+    .downButton {
+        transform: rotate(90deg);
+    }
+
+    .upButton,
+    .voteCount {
+        transform: rotate(-90deg);
+    }
+}

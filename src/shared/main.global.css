@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto-Regular.eot');
+    src: url('/static/fonts/Roboto-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('/static/fonts/Roboto-Regular.woff') format('woff'),
+        url('/static/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto-Medium.eot');
+    src: url('/static/fonts/Roboto-Medium.eot?#iefix')
+            format('embedded-opentype'),
+        url('/static/fonts/Roboto-Medium.woff') format('woff'),
+        url('/static/fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root {
+    --black: #333333;
+    --red: #cc3361;
+    --green: #a3cc33;
+    --orange: #cc6633;
+    --white: #ffffff;
+    --greyF4: #f5f5f5;
+    --greyD9: #d9d9d9;
+    --greyC4: #c4c4c4;
+    --grey99: #999999;
+    --grey33-1: hsla(0, 0%, 20%, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--greyF4);
+    color: var(--black);
+    font-family: Roboto, sans-serif;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    margin: 0;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

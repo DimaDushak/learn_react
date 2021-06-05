@@ -1,0 +1,17 @@
+.preview {
+    max-height: 178px;
+}
+
+.previewImage {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .preview {
+        max-height: 107px;
+        max-width: 190px;
+        order: -1;
+    }
+}
