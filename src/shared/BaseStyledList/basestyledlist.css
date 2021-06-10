@@ -1,0 +1,31 @@
+.white {
+    background-color: var(--white);
+    color: var(--grey99);
+    transition: color 0.3s;
+}
+
+.white path {
+    transition: fill 0.3s;
+}
+
+.white:nth-last-of-type(n + 3) :only-child {
+    border-bottom: 1px solid var(--greyEC);
+}
+
+.white:hover {
+    color: var(--orange);
+}
+
+.white:hover path {
+    fill: var(--orange);
+}
+
+.grey {
+    background-color: var(--greyD9);
+    text-align: center;
+}
+
+.white,
+.grey {
+    cursor: pointer;
+}
