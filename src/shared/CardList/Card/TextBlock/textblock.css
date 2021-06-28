@@ -87,6 +87,7 @@
 
     .postHeading {
         font-size: 1rem;
+        line-height: 1.2rem;
         margin-bottom: 10px;
         max-width: 540px;
         order: -1;

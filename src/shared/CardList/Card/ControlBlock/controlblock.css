@@ -67,6 +67,18 @@
     background-color: var(--orange);
 }
 
+.roundButton path {
+    fill: var(--white);
+}
+
+.shareIcon {
+    transform: translateX(-1px);
+}
+
+.shareIcon path {
+    transform: scale(0.7);
+}
+
 @media (min-width: 1024px) {
     .controlBlock {
         font-size: 0.7rem;
@@ -89,5 +101,13 @@
     .upButton,
     .voteCount {
         transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 1023px) {
+    .messageButton path,
+    .upButton path,
+    .downButton path {
+        fill: var(--greyC4);
     }
 }

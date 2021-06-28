@@ -1,31 +1,77 @@
-.white {
+.list {
     background-color: var(--white);
+    padding: 0 20px;
+}
+
+.listItem {
+    align-items: center;
     color: var(--grey99);
+    cursor: pointer;
+    display: flex;
+    padding: 11px 0;
     transition: color 0.3s;
 }
 
-.white path {
-    transition: fill 0.3s;
+.listItemName {
+    font-size: 0.6rem;
+    line-height: 0.7rem;
 }
 
-.white:nth-last-of-type(n + 3) :only-child {
-    border-bottom: 1px solid var(--greyEC);
-}
-
-.white:hover {
+.listItem:hover {
     color: var(--orange);
 }
 
-.white:hover path {
+.listItem path {
+    transition: fill 0.3s;
+}
+
+.listItem:hover path {
     fill: var(--orange);
 }
 
-.grey {
-    background-color: var(--greyD9);
-    text-align: center;
+.listItem svg {
+    margin-right: 6px;
 }
 
-.white,
-.grey {
-    cursor: pointer;
+.listItem:not(:last-of-type) {
+    border-bottom: 1px solid var(--greyEC);
+}
+
+.closeButton {
+    background-color: var(--greyD9);
+    color: var(--lightBlack);
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+    padding: 11px 0;
+    text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .listItemName,
+    .closeButton {
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+    }
+}
+
+@media (min-width: 1540px) {
+    .list {
+        padding: 10px 20px;
+    }
+
+    .listItem {
+        padding: 5px 0;
+    }
+
+    .closeButton {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .listItem svg {
+        width: 16px;
+        height: 14px;
+    }
 }

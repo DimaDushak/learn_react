@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    ArrowIcon,
-    ChartIcon,
-    MessageIcon,
-    ShareIcon,
-    TrashBinIcon,
-} from '../../../Icons';
+import Icon, { EIcons } from '../../../Icon';
 import styles from './controlblock.css';
 
 export default function ControlBlock(): JSX.Element {
@@ -13,28 +7,33 @@ export default function ControlBlock(): JSX.Element {
         <div className={styles.controlBlock}>
             <div>
                 <button type="button" className={styles.upButton}>
-                    <ArrowIcon />
+                    <Icon name={EIcons.arrow} width={19} height={10} />
                 </button>
                 <span className={styles.voteCount}>101</span>
                 <button type="button" className={styles.downButton}>
-                    <ArrowIcon />
+                    <Icon name={EIcons.arrow} width={19} height={10} />
                 </button>
             </div>
             <div>
                 <button type="button" className={styles.messageButton}>
-                    <MessageIcon />
+                    <Icon name={EIcons.message} width={14.17} />
                 </button>
                 <span>14</span>
             </div>
             <div>
                 <button type="button" className={styles.roundButton}>
-                    <ChartIcon />
+                    <Icon name={EIcons.chart} width={13} height={8} />
                 </button>
                 <button type="button" className={styles.roundButton}>
-                    <ShareIcon />
+                    <Icon
+                        name={EIcons.share}
+                        width={8}
+                        height={10}
+                        className={styles.shareIcon}
+                    />
                 </button>
                 <button type="button" className={styles.roundButton}>
-                    <TrashBinIcon />
+                    <Icon name={EIcons.trashBin} width={8} height={10} />
                 </button>
             </div>
         </div>

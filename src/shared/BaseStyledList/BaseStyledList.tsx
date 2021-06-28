@@ -1,20 +1,29 @@
 import React from 'react';
-import type { GenericListProps } from '../GenericList';
-import GenericList from '../GenericList';
+import Icon, { EIcons } from '../Icon';
 import styles from './basestyledlist.css';
 
-interface BaseStyledListProps {
-    className?: string;
+interface Props {
+    list: Array<{
+        id: string;
+        text: string;
+        icon: keyof typeof EIcons;
+    }>;
 }
 
-export default function BaseStyledList({
-    list,
-    className,
-}: GenericListProps & BaseStyledListProps): JSX.Element {
+export default function BaseStyledList({ list }: Props): JSX.Element {
     return (
-        <ul className={className}>
-            <GenericList list={list} />
-            <li className={styles.grey}>Закрыть</li>
-        </ul>
+        <>
+            <ul className={styles.list}>
+                {list.map(({ id, text, icon }) => (
+                    <li key={id} className={styles.listItem}>
+                        <Icon name={EIcons[icon]} width={16} />
+                        <span className={styles.listItemName}>{text}</span>
+                    </li>
+                ))}
+            </ul>
+            <button className={styles.closeButton} type="button">
+                Закрыть
+            </button>
+        </>
     );
 }
