@@ -1,0 +1,19 @@
+.container {
+    flex: 1;
+    width: 100%;
+}
+
+.listContainer {
+    position: relative;
+}
+
+.list {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.listPosition {
+    left: 0;
+    top: 0;
+}

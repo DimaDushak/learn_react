@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './card.css';
+import CardDropdown from './CardDropdown';
 import ControlBlock from './ControlBlock';
-import DropdownButton from './MenuButton';
 import Preview from './Preview';
 import TextBlock from './TextBlock';
 
@@ -11,7 +11,7 @@ export default function Card(): JSX.Element {
             <TextBlock />
             <Preview />
             <ControlBlock />
-            <DropdownButton />
+            <CardDropdown />
         </li>
     );
 }

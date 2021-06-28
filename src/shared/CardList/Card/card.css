@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.card > div {
+.card > div:not(:last-of-type) {
     flex-basis: 100%;
 }
 
@@ -26,7 +26,7 @@
         padding: 20px 40px 20px 37px;
     }
 
-    .card > div {
+    .card > div:not(:last-of-type) {
         flex-basis: auto;
     }
 }
