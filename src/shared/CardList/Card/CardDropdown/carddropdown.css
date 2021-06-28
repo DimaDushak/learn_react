@@ -1,0 +1,57 @@
+.container {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
+
+.menuButton {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 31px;
+    justify-content: center;
+    transition: background-color 0.3s;
+    width: 31px;
+}
+
+.menuButton:hover {
+    background-color: var(--grey33a);
+}
+
+.listPosition {
+    right: 118px;
+    top: 10px;
+}
+
+.dropdownList {
+    box-shadow: 0px 0px 20px var(--grey26);
+    width: 144px;
+}
+
+.dropdownList li {
+    font-size: 0.6rem;
+    padding: 0 20px;
+}
+
+.dropdownList li span {
+    padding: 12px 0;
+}
+
+.dropdownList li:last-of-type {
+    padding: 12px 20px;
+}
+
+.dropdownList svg {
+    margin-right: 6px;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        right: 100px;
+        top: 59px;
+    }
+
+    .menuButton {
+        transform: rotate(90deg);
+    }
+}
