@@ -1,9 +1,7 @@
 import React from 'react';
-import merge from '../../../../utils/js/merge';
 import BaseStyledList from '../../../BaseStyledList';
-import listStyles from '../../../BaseStyledList/basestyledlist.css';
 import Dropdown from '../../../Dropdown';
-import { MenuIcon } from '../../../Icons';
+import Icon, { EIcons } from '../../../Icon';
 import styles from './carddropdown.css';
 import dropdownList from './dropdownList';
 
@@ -13,17 +11,14 @@ export default function CardDropdown(): JSX.Element {
             <Dropdown
                 button={
                     <button type="button" className={styles.menuButton}>
-                        <MenuIcon />
+                        <Icon name={EIcons.menu} width={20} height={5} />
                     </button>
                 }
                 listClassName={styles.listPosition}
             >
-                <BaseStyledList
-                    list={dropdownList.map(
-                        merge({ className: listStyles.white }),
-                    )}
-                    className={styles.dropdownList}
-                />
+                <div className={styles.listContainer}>
+                    <BaseStyledList list={dropdownList} />
+                </div>
             </Dropdown>
         </div>
     );
