@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Preview (snapshot) 1`] = `
+<div
+  class="preview"
+>
+  <img
+    alt="#"
+    class="previewImage"
+    src="/static/fonts/Rectangle.png"
+  />
+</div>
+`;
