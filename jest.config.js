@@ -9,11 +9,11 @@ module.exports = {
             statements: 80,
         },
     },
-    preset: 'ts-jest',
-    testEnvironment: 'jsdom',
     moduleNameMapper: {
         '\\.(css)': 'identity-obj-proxy',
     },
+    preset: 'ts-jest',
     setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+    testEnvironment: 'jsdom',
     verbose: true,
 };
