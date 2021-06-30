@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown render after button click (snapshot) 1`] = `
+<div
+  class="container"
+>
+  <div>
+    <button
+      type="button"
+    >
+      Нажми
+    </button>
+  </div>
+  <div
+    class="listContainer"
+  >
+    <div
+      class="listPosition list"
+    >
+      <ul>
+        Список
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dropdown should render (snapshot) 1`] = `
+<div
+  class="container"
+>
+  <div>
+    <button
+      type="button"
+    >
+      Нажми
+    </button>
+  </div>
+</div>
+`;

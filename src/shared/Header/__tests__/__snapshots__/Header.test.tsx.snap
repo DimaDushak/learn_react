@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header (snapshot) 1`] = `
+<header
+  class="header"
+>
+  <div>
+    search
+  </div>
+  <div>
+    title
+  </div>
+  <div>
+    sort
+  </div>
+</header>
+`;

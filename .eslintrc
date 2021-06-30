@@ -35,6 +35,7 @@
         "cfg",
         "bin",
         "jest.config.js",
+        "jest.setup.ts",
         "dist/*"
     ],
     "rules": {

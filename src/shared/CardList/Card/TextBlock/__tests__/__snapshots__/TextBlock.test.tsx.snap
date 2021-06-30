@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render TextBlock (snapshot) 1`] = `
+<div
+  class="textBlock"
+>
+  <div
+    class="authorInfoBlock"
+  >
+    <div
+      class="linkBlock"
+    >
+      <img
+        alt="#"
+        class="authorAvatar"
+        src="https://cdn.dribbble.com/users/2202649/avatars/small/2044ffe8e8848aeb80e514229c21c515.png?1616573826"
+      />
+      <a
+        class="authorLink"
+        href="#user"
+      >
+        Константин Кодов
+      </a>
+    </div>
+    <span
+      class="publishTime"
+    >
+      <span
+        class="publish"
+      >
+        опубликовано
+      </span>
+      8 часов назад
+    </span>
+  </div>
+  <h2
+    class="postHeading"
+  >
+    <a
+      class="postLink"
+      href="#post"
+    >
+      Следует отметить, что новая модель организационной деятельности и деятельности и деятельности и деятельности
+    </a>
+  </h2>
+</div>
+`;
