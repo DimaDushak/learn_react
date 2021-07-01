@@ -5,10 +5,10 @@
     "main": "index.js",
     "scripts": {
         "eslint": "eslint --fix ./src",
-        "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-        "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+        "build:dev": "cross-env NODE_ENV=development CLIENT_ID=GA3UOca8jjdyAA webpack --config webpack.config.js",
+        "build:prod": "cross-env NODE_ENV=production CLIENT_ID=GA3UOca8jjdyAA webpack --config webpack.config.js",
         "predev": "npm run eslint",
-        "dev": "cross-env NODE_ENV=development node ./bin/dev.js",
+        "dev": "cross-env NODE_ENV=development CLIENT_ID=GA3UOca8jjdyAA node ./bin/dev.js",
         "test": "jest --coverage",
         "test:watch": "jest --watch"
     },

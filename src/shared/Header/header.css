@@ -1,6 +1,12 @@
 @media (min-width: 1024px) {
     .header {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        padding: 40px;
+    }
+
+    .header > div:not(:last-of-type) {
+        flex-basis: 50%;
     }
 }

@@ -1,5 +1,6 @@
 const path = require('path');
 const NodeExternal = require('webpack-node-externals');
+const { EnvironmentPlugin } = require('webpack');
 
 const NODE_ENV = process.env.NODE_ENV;
 const IS_PROD = NODE_ENV === 'production';
@@ -49,4 +50,5 @@ module.exports = {
     optimization: {
         minimize: false,
     },
+    plugins: [new EnvironmentPlugin(['CLIENT_ID'])],
 };

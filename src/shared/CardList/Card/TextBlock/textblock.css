@@ -7,35 +7,28 @@
 .authorInfoBlock {
     align-items: center;
     display: flex;
-    font-size: 0.5rem;
     margin-bottom: 7px;
 }
 
-.linkBlock {
-    align-items: center;
-    display: flex;
-    margin-right: 5px;
-}
-
-.authorAvatar {
-    border-radius: 50%;
-    height: 20px;
-    margin-right: 7px;
-    width: 20px;
-}
-
-.authorLink {
+.authorInfoBlock a {
     color: var(--orange);
+}
+
+.authorInfoBlock:hover a {
+    text-decoration: underline;
+}
+
+.authorInfoBlock a span,
+.authorInfoBlock a img {
     position: relative;
     z-index: 1;
 }
 
-.authorLink:hover {
-    text-decoration: underline;
-}
-
 .publishTime {
     color: var(--grey99);
+    font-size: 0.5rem;
+    line-height: 0.6rem;
+    margin-left: 5px;
 }
 
 .publish {
@@ -70,14 +63,15 @@
     }
 
     .authorInfoBlock {
-        font-size: 0.7rem;
         margin-bottom: 0;
     }
 
-    .linkBlock {
-        order: 1;
-        margin-left: 7px;
-        margin-right: 0;
+    .publishTime {
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+        margin-right: 7px;
+        margin-left: 0;
+        order: -1;
     }
 
     .publish {

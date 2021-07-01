@@ -1,5 +1,5 @@
 const path = require('path');
-const { HotModuleReplacementPlugin } = require('webpack');
+const { HotModuleReplacementPlugin, EnvironmentPlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -7,15 +7,25 @@ const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV === 'development';
 const IS_PROD = NODE_ENV === 'production';
 const GLOBAL_CSS_REGEXP = /\.global\.css/;
-
-const COPY_WEBPACK_PLUGIN = new CopyPlugin({
-    patterns: [
-        {
-            from: path.resolve(__dirname, '../src/fonts'),
-            to: path.resolve(__dirname, '../dist/client/fonts'),
-        },
-    ],
-});
+const DEVELOP_PLUGINS = [
+    new CleanWebpackPlugin(),
+    new HotModuleReplacementPlugin(),
+];
+const COMMON_PLUGINS = [
+    new CopyPlugin({
+        patterns: [
+            {
+                from: path.resolve(__dirname, '../src/fonts'),
+                to: path.resolve(__dirname, '../dist/client/fonts'),
+            },
+            {
+                from: path.resolve(__dirname, '../src/image'),
+                to: path.resolve(__dirname, '../dist/client/image'),
+            },
+        ],
+    }),
+    new EnvironmentPlugin(['CLIENT_ID']),
+];
 
 function setupDevtool() {
     if (IS_DEV) return 'eval';
@@ -68,12 +78,6 @@ module.exports = {
             },
         ],
     },
-    plugins: IS_DEV
-        ? [
-              new CleanWebpackPlugin(),
-              new HotModuleReplacementPlugin(),
-              COPY_WEBPACK_PLUGIN,
-          ]
-        : [COPY_WEBPACK_PLUGIN],
+    plugins: IS_DEV ? [...DEVELOP_PLUGINS, ...COMMON_PLUGINS] : COMMON_PLUGINS,
     devtool: setupDevtool(),
 };
