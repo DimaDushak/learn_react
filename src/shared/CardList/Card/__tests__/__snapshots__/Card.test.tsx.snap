@@ -10,21 +10,21 @@ exports[`should render Card (snapshot) 1`] = `
     <div
       class="authorInfoBlock"
     >
-      <div
-        class="linkBlock"
+      <a
+        class="userBlock userBlockSizes"
+        href="#user"
       >
         <img
           alt="#"
           class="authorAvatar"
           src="https://cdn.dribbble.com/users/2202649/avatars/small/2044ffe8e8848aeb80e514229c21c515.png?1616573826"
         />
-        <a
-          class="authorLink"
-          href="#user"
+        <span
+          class=""
         >
           Константин Кодов
-        </a>
-      </div>
+        </span>
+      </a>
       <span
         class="publishTime"
       >
@@ -53,7 +53,7 @@ exports[`should render Card (snapshot) 1`] = `
     <img
       alt="#"
       class="previewImage"
-      src="/static/fonts/Rectangle.png"
+      src="/static/image/Rectangle.png"
     />
   </div>
   <div

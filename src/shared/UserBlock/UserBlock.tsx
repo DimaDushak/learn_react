@@ -18,7 +18,7 @@ export default function UserBlock({
     return (
         <a href={link} className={`${styles.userBlock} ${className}`}>
             <img src={avatarSrc} alt="#" className={styles.authorAvatar} />
-            <span className={userName ?? styles.anonim}>
+            <span className={userName ? '' : styles.anonim}>
                 {userName ?? 'Аноним'}
             </span>
         </a>
