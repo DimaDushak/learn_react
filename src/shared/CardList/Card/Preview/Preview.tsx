@@ -7,7 +7,7 @@ export default function Preview(): JSX.Element {
             <img
                 className={styles.previewImage}
                 alt="#"
-                src="/static/fonts/Rectangle.png"
+                src="/static/image/Rectangle.png"
             />
         </div>
     );

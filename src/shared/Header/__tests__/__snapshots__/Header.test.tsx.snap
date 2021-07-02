@@ -4,10 +4,28 @@ exports[`should render Header (snapshot) 1`] = `
 <header
   class="header"
 >
-  <div>
-    search
+  <div
+    class="searchBlock"
+  >
+    <a
+      class="userBlock userBlock"
+      href="https://www.reddit.com/api/v1/authorize?client_id=undefined&response_type=code&state=random_string&redirect_uri=http://localhost:3000/auth&duration=permanent&scope=read identity submit"
+    >
+      <img
+        alt="#"
+        class="authorAvatar"
+        src="/static/image/AnonimIcon.svg"
+      />
+      <span
+        class="anonim"
+      >
+        Аноним
+      </span>
+    </a>
   </div>
-  <div>
+  <div
+    class="titleBlock"
+  >
     title
   </div>
   <div>

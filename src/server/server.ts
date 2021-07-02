@@ -11,6 +11,10 @@ app.get('/', (_req, res) => {
     res.send(indexTemplate(ReactDOM.renderToString(App())));
 });
 
+app.get('/auth', (_req, res) => {
+    res.send(indexTemplate(ReactDOM.renderToString(App())));
+});
+
 app.listen(3000, () => {
     // eslint-disable-next-line no-console
     console.log('Server started on http://localhost:3000');
