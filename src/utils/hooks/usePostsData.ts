@@ -3,7 +3,7 @@ import axios from 'axios';
 import tokenContext from '../../shared/context/tokenContext';
 import { getFromServer } from '../js';
 
-export interface PostData {
+interface PostData {
     data: {
         author: string;
         created_utc: number;

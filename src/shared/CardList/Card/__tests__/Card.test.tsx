@@ -3,15 +3,7 @@ import React from 'react';
 import Card from '../Card';
 
 test('should render Card (snapshot)', () => {
-    const post = {
-        author: 'dima_dushak',
-        created_utc: 1659515678,
-        id: 'd3fgt4g',
-        title: 'Заголовок',
-        url: '#url',
-    };
-
-    const { container } = render(<Card post={post} />);
+    const { container } = render(<Card />);
 
     expect(container.firstChild).toMatchSnapshot();
 });
