@@ -22,8 +22,9 @@
     .card {
         align-items: center;
         flex-wrap: nowrap;
-        margin: 0;
-        padding: 20px 40px 20px 37px;
+        height: 147px;
+        margin: 1px;
+        padding: 0 40px 0 37px;
     }
 
     .card > div:not(:last-of-type) {
@@ -33,6 +34,6 @@
 
 @media (min-width: 1540px) {
     .card {
-        padding: 20px 45px 20px 72px;
+        padding: 0 45px 0 72px;
     }
 }

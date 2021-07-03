@@ -1,4 +1,4 @@
-import assignId from '../../../../utils/js/assoc';
+import { assignId } from '../../../../utils/js';
 
 const dropdownList = [
     { text: 'Комментарии', icon: 'message' as const },

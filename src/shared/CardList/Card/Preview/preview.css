@@ -13,5 +13,6 @@
         max-height: 107px;
         max-width: 190px;
         order: -1;
+        overflow: hidden;
     }
 }

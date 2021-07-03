@@ -1,26 +1,36 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import styles from './textblock.css';
+import React, { useContext } from 'react';
+import { useAvatarLink } from '../../../../utils/hooks';
+import { getPublishTime } from '../../../../utils/js';
+import postContext from '../../../context/postContext';
 import UserBlock from '../../../UserBlock';
+import styles from './textblock.css';
 
 export default function TextBlock(): JSX.Element {
+    const post = useContext(postContext);
+    const avatarSrc = useAvatarLink(post);
+
     return (
         <div className={styles.textBlock}>
             <div className={styles.authorInfoBlock}>
                 <UserBlock
-                    link="#user"
-                    avatarSrc="https://cdn.dribbble.com/users/2202649/avatars/small/2044ffe8e8848aeb80e514229c21c515.png?1616573826"
-                    userName="Константин Кодов"
+                    link={`https://www.reddit.com/user/${post.author}`}
+                    avatarSrc={avatarSrc.replaceAll('&amp;', '&')}
+                    userName={post.author}
                 />
                 <span className={styles.publishTime}>
-                    <span className={styles.publish}>опубликовано</span>8 часов
-                    назад
+                    <span className={styles.publish}>опубликовано</span>
+                    {getPublishTime(post.created_utc ?? 0)}
                 </span>
             </div>
             <h2 className={styles.postHeading}>
-                <a href="#post" className={styles.postLink}>
-                    Следует отметить, что новая модель организационной
-                    деятельности и деятельности и деятельности и деятельности
+                <a
+                    href={post.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.postLink}
+                >
+                    {post.title}
                 </a>
             </h2>
         </div>
