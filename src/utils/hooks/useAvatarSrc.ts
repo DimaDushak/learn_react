@@ -2,18 +2,17 @@ import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import postContext from '../../shared/context/postContext';
 import tokenContext from '../../shared/context/tokenContext';
-import { getFromServer } from '../js';
+import { checkDataFromServer } from '../js';
 
-export default function useAvatarLink(post = useContext(postContext)): string {
-    const [avatarSrcLink, setAvatarSrcLink] = useState('');
+export default function useAvatarSrc(post = useContext(postContext)): string {
+    const [avatarSrc, setAvatarSrc] = useState('');
 
     const token = useContext(tokenContext);
 
     useEffect(() => {
         if (!token || !post.author) return;
 
-        const getAvatarLink = async () => {
-            // eslint-disable-next-line @typescript-eslint/naming-convention
+        const getAvatarSrc = async () => {
             const { data } = await axios.get(
                 `https://oauth.reddit.com/user/${post.author}/about`,
                 {
@@ -21,11 +20,11 @@ export default function useAvatarLink(post = useContext(postContext)): string {
                 },
             );
 
-            setAvatarSrcLink(data.data.icon_img);
+            setAvatarSrc(data.data.icon_img);
         };
 
-        getFromServer(getAvatarLink);
+        checkDataFromServer(getAvatarSrc);
     }, [token, post]);
 
-    return avatarSrcLink;
+    return avatarSrc;
 }

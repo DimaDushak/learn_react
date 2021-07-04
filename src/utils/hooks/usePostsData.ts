@@ -1,7 +1,7 @@
-import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import { useContext, useEffect, useState } from 'react';
 import tokenContext from '../../shared/context/tokenContext';
-import { getFromServer } from '../js';
+import { checkDataFromServer } from '../js';
 
 interface PostData {
     data: {
@@ -38,7 +38,7 @@ export default function usePostsData(): PostData[] {
             setPostsData(data.data.children);
         };
 
-        getFromServer(getPostsData);
+        checkDataFromServer(getPostsData);
     }, [token]);
 
     return postsData;

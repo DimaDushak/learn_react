@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import tokenContext from '../../shared/context/tokenContext';
-import { getFromServer } from '../js';
+import { checkDataFromServer } from '../js';
 
 interface UserData {
     avatarSrc?: string;
@@ -27,7 +27,7 @@ export default function useUserData(): UserData {
             setUserData({ userName: name, avatarSrc: icon_img });
         };
 
-        getFromServer(getUserData);
+        checkDataFromServer(getUserData);
     }, [token]);
 
     return userData;

@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from 'react';
-import { useAvatarLink } from '../../../../utils/hooks';
+import { useAvatarSrc } from '../../../../utils/hooks';
 import { getPublishTime } from '../../../../utils/js';
 import postContext from '../../../context/postContext';
 import UserBlock from '../../../UserBlock';
@@ -8,7 +7,7 @@ import styles from './textblock.css';
 
 export default function TextBlock(): JSX.Element {
     const post = useContext(postContext);
-    const avatarSrc = useAvatarLink(post);
+    const avatarSrc = useAvatarSrc(post);
 
     return (
         <div className={styles.textBlock}>

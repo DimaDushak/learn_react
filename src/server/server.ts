@@ -2,7 +2,7 @@ import axios from 'axios';
 import express from 'express';
 import ReactDOM from 'react-dom/server';
 import App from '../shared/App';
-import getFromServer from '../utils/js/getFromServer';
+import { checkDataFromServer } from '../utils/js';
 import indexTemplate from './indexTemplate';
 
 const app = express();
@@ -34,7 +34,7 @@ app.get('/auth', (req, res) => {
         );
     };
 
-    getFromServer(getToken);
+    checkDataFromServer(getToken);
 });
 
 app.listen(3000, () => {
