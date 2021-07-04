@@ -4,9 +4,11 @@ exports[`UserBlock should render UserBlock with optional props (snapshot) 1`] = 
 <a
   class="userBlock testClass"
   href="#link"
+  rel="noreferrer"
+  target="_blank"
 >
   <img
-    alt="#"
+    alt="User avatar"
     class="authorAvatar"
     src="#avatarSrc"
   />
@@ -22,9 +24,10 @@ exports[`UserBlock should render UserBlock without optional props (snapshot) 1`]
 <a
   class="userBlock userBlockSizes"
   href="https://www.reddit.com/api/v1/authorize?client_id=undefined&response_type=code&state=random_string&redirect_uri=http://localhost:3000/auth&duration=permanent&scope=read identity submit"
+  rel="noreferrer"
 >
   <img
-    alt="#"
+    alt="User avatar"
     class="authorAvatar"
     src="/static/image/AnonimIcon.svg"
   />

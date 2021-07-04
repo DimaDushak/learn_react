@@ -60,10 +60,16 @@
 @media (min-width: 1024px) {
     .textBlock {
         flex-grow: 1;
+        padding: 0 0 0 13px;
     }
 
     .authorInfoBlock {
         margin-bottom: 0;
+        padding-bottom: 1px;
+    }
+
+    .authorInfoBlock a span {
+        padding-top: 2px;
     }
 
     .publishTime {

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import useIsMounted from '../../utils/hooks/useIsMounted';
+import { useIsMounted } from '../../utils/hooks';
 import styles from './dropdown.css';
 
 interface Props {
